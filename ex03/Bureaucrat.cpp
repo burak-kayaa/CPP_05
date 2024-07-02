@@ -106,14 +106,7 @@ void	Bureaucrat::executeForm(AForm const &form)
 	}
 }
 
-std::ostream	&operator<<(std::ostream &o, Bureaucrat *a)
-{
-	o << "Bureaucrat " << a->getName() << ":\n\tgrade: " << a->getGrade() << std::endl;
-	return (o);
+std::ostream& operator<<(std::ostream &out, const Bureaucrat &b) {
+    out << b.getName() << ", bureaucrat grade " << b.getGrade();
+    return out;
 }
-
-// std::ostream &operator<<(std::ostream &out, Bureaucrat const &bureaucrat)
-// {
-// 	out << bureaucrat.getName() << ", bureaucrat grade " << bureaucrat.getGrade() << std::endl;
-// 	return out;
-// }
